@@ -15,7 +15,7 @@ uv pip install --python .venv/bin/python -e . 'torch==2.15.0'
 
 ## Synthesize speech
 
-Download `tiny-voca-nl.pt` from the [Hugging Face model repo](https://huggingface.co/xxy998/tiny-voca-nl). Install [eSpeak NG 1.52.0](https://github.com/espeak-ng/espeak-ng/tree/4870adfa25b1a32b4361592f1be8a40337c58d6c) with Dutch language data. For the launcher below, place the executable and data at `.tools/espeak-ng/bin/espeak-ng` and `.tools/espeak-ng/share/espeak-ng-data/`, respectively.
+Download `tiny-voca-nl.pt` from the [Hugging Face model repository](https://huggingface.co/xxy998/tiny-voca-nl). Install [eSpeak NG 1.52.0](https://github.com/espeak-ng/espeak-ng/tree/4870adfa25b1a32b4361592f1be8a40337c58d6c) with Dutch language data. The launcher below expects the executable at `.tools/espeak-ng/bin/espeak-ng` and the language data at `.tools/espeak-ng/share/espeak-ng-data/`.
 
 ```sh
 ./scripts/speak.sh --checkpoint /path/to/tiny-voca-nl.pt \
@@ -26,7 +26,7 @@ If eSpeak is installed elsewhere, put it on `PATH` and invoke `.venv/bin/tiny-vo
 
 ## Training
 
-The [Hugging Face dataset](https://huggingface.co/datasets/xxy998/tiny-voca-nl) contains the Dutch audio, text, and phoneme annotations. See [TRAINING.md](TRAINING.md) for building the Piper corpus, training from scratch, and fitting the excitation correction.
+The [tiny-voca-nl dataset](https://huggingface.co/datasets/xxy998/tiny-voca-nl) contains Dutch audio, text, and phoneme annotations. See [TRAINING.md](TRAINING.md) for corpus preparation, training from scratch, and excitation correction fitting.
 
 ## Regression tests
 
