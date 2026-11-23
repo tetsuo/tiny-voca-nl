@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+/.tools/
+/assets/
+/checkpoints/
+/data/
+/runs/
+/SHA256SUMS
+/web/public/assets/
+*.wav
