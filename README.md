@@ -1,6 +1,8 @@
 # tiny-voca-nl
 
-Dutch text-to-speech based on [tiny-voca](https://github.com/n4ze3m/tiny-voca). It uses a roughly 4.5-million-parameter source-filter model to produce 24 kHz mono audio in a single `nl-NL` voice. eSpeak NG handles pronunciation; the model generates the audio offline on CPU. The [browser demo](https://huggingface.co/spaces/xxy998/tiny-voca-nl) runs the same calibrated model with ONNX Runtime Web and eSpeak NG compiled to WebAssembly.
+Dutch text-to-speech based on [tiny-voca](https://github.com/n4ze3m/tiny-voca). It uses a roughly 4.5-million-parameter source-filter model to produce 24 kHz mono audio in one Dutch voice. eSpeak NG handles pronunciation; the model generates the audio offline on CPU.
+
+The [browser demo](https://huggingface.co/spaces/xxy998/tiny-voca-nl) runs the same calibrated model with ONNX Runtime Web and eSpeak NG compiled to WebAssembly.
 
 The model was trained from scratch on speech synthesized by the Alex voice from [Piper Voices](https://huggingface.co/rhasspy/piper-voices/tree/e929968c3761f1c281875787685a745863db838d/nl/nl_NL/alex/medium). A separate fit adjusts the renderer's pulse-to-noise mix to reduce audible buzz without changing the base model weights. Some utterances can still sound mechanical.
 
@@ -26,7 +28,7 @@ If eSpeak is installed elsewhere, put it on `PATH` and invoke `.venv/bin/tiny-vo
 
 ## Training
 
-The [Hugging Face dataset](https://huggingface.co/datasets/xxy998/tiny-voca-nl) contains the Dutch audio, text, and phoneme annotations. See [TRAINING.md](TRAINING.md) for the recipe.
+The [Hugging Face dataset](https://huggingface.co/datasets/xxy998/tiny-voca-nl) contains the Dutch audio, text, and phoneme annotations. See [TRAINING.md](TRAINING.md) for building the Piper corpus, training from scratch, and fitting the excitation correction.
 
 ## Regression tests
 
