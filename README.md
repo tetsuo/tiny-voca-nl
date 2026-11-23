@@ -1,10 +1,8 @@
 # tiny-voca-nl
 
-Dutch text-to-speech based on [tiny-voca](https://github.com/n4ze3m/tiny-voca). It uses a roughly 4.5-million-parameter source-filter model to produce 24 kHz mono audio in one Dutch voice. eSpeak NG handles pronunciation; the model generates the audio offline on CPU.
+An experimental Dutch text-to-speech model based on [tiny-voca](https://github.com/n4ze3m/tiny-voca). It generates 24 kHz mono audio using a single speaker and runs offline on CPU. The PyTorch checkpoint has 4.54 million parameters and is 18.2 MB.
 
-The [browser demo](https://huggingface.co/spaces/xxy998/tiny-voca-nl) runs the same calibrated model with ONNX Runtime Web and eSpeak NG compiled to WebAssembly.
-
-The model was trained from scratch on speech synthesized by the Alex voice from [Piper Voices](https://huggingface.co/rhasspy/piper-voices/tree/e929968c3761f1c281875787685a745863db838d/nl/nl_NL/alex/medium). A separate fit adjusts the renderer's pulse-to-noise mix to reduce audible buzz without changing the base model weights. Some utterances can still sound mechanical.
+The model was trained from scratch on speech synthesized by the Alex voice from [Piper Voices](https://huggingface.co/rhasspy/piper-voices/tree/e929968c3761f1c281875787685a745863db838d/nl/nl_NL/alex/medium). A separate fit adjusts the renderer's pulse-to-noise mix to reduce audible buzz without changing the base model weights. The [browser demo](https://huggingface.co/spaces/xxy998/tiny-voca-nl) runs the same calibrated model with ONNX Runtime Web and eSpeak NG compiled to WebAssembly.
 
 ## Installation
 
